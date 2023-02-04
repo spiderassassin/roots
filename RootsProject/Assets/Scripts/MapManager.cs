@@ -1,0 +1,59 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Tilemaps;
+
+public class MapManager : MonoBehaviour
+{
+    [SerializeField]
+    private Grid grid;
+    [SerializeField]
+    private Tilemap tiles;
+    public Sprite dirt;
+    public Sprite largeRock;
+    public Sprite smallRock;
+
+    private Dictionary<Vector3Int, DynamicObject> dynamicObjectsMap;
+
+    private void Start()
+    {
+        dynamicObjectsMap = new Dictionary<Vector3Int, DynamicObject>();
+    }
+
+    public void RegisterDynamicObject(GameObject go,TileType t) {
+        dynamicObjectsMap.Add(grid.WorldToCell(go.transform.position), new DynamicObject(go,t));
+    }
+
+    public enum TileType { Dirt, LargeRock, SmallRock, Root, Unknown };
+    public TileType GetTileType(Vector3 pos)
+    {
+        Vector3Int intPos = tiles.WorldToCell(pos);
+        if (dynamicObjectsMap.ContainsKey(intPos)) {
+            return dynamicObjectsMap[intPos].type;
+        }
+
+        Tile t = tiles.GetTile<Tile>(intPos);
+        if (t.sprite == dirt) {
+            return TileType.Dirt;
+        }
+        if (t.sprite == largeRock) {
+            return TileType.LargeRock;
+        }
+        if (t.sprite == smallRock) {
+            return TileType.SmallRock;
+        }
+
+        print(" the tile type is unknown!!!");
+        return TileType.Unknown;
+    }
+
+    public class DynamicObject
+    {
+        public GameObject instance;
+        public TileType type;
+        public DynamicObject(GameObject g, TileType t) {
+            instance = g;
+            type = t;
+        }
+    }
+}
