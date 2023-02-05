@@ -134,6 +134,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelPackage
       objectReference: {fileID: 0}
+    - target: {fileID: 2449337661651183199, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: nitrogen
+      value: 
+      objectReference: {fileID: -1995053741, guid: d5af94a909be1b440893476561957a1e, type: 3}
+    - target: {fileID: 2449337661651183199, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: potassium
+      value: 
+      objectReference: {fileID: -440292501, guid: d5af94a909be1b440893476561957a1e, type: 3}
+    - target: {fileID: 2449337661651183199, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: phosphorus
+      value: 
+      objectReference: {fileID: -2115473238, guid: d5af94a909be1b440893476561957a1e, type: 3}
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileAssetArray.Array.size
       value: 5
