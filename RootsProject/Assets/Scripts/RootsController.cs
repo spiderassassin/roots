@@ -15,7 +15,8 @@ public class RootsController : MonoBehaviour
     public TextMeshProUGUI movesLeftText;
     public int movesLeft = 10;
     public bool canBreakSmallRocks = false;
-
+    public AudioSource rock_break;
+    public AudioSource root_grow;
     public enum Direction { Up = 0,Right = -90,Left = 90,Down = 180};
 
     private Root primaryRoot;
@@ -91,6 +92,7 @@ public class RootsController : MonoBehaviour
                     case MapManager.TileType.Potassium:
                         //ApplyMove(r, newPosition, direction);
                         //SpawnNewRoot(direction+90);
+                        root_grow.Play();
                         break;
                     case MapManager.TileType.Phosphorus:
                         ApplyMove(r, newPosition, direction);
@@ -99,6 +101,7 @@ public class RootsController : MonoBehaviour
                     case MapManager.TileType.SmallRock:
                         if (canBreakSmallRocks){
                             ApplyMove(r, newPosition, direction);
+                            rock_break.Play();
                         }
                         break;
                     case MapManager.TileType.Nitrogen:
