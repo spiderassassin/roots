@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class RootsController : MonoBehaviour
@@ -10,6 +11,8 @@ public class RootsController : MonoBehaviour
     public Transform root;
     public Sprite r, l, u, d;
     public GameObject rr, ll, uu, dd;
+    public TextMeshProUGUI movesLeftText;
+    public int movesLeft = 10;
 
     public enum Direction { Up,Right,Left,Down};
     private Direction lastDirection;
@@ -19,6 +22,7 @@ public class RootsController : MonoBehaviour
     {
         direction = startingDirection;
         rootRenderer.sprite = GetSprite(direction);
+        UpdateMovesLeft(movesLeft);
     }
     Sprite GetSprite(Direction dir) {
         switch (dir) {
@@ -35,6 +39,11 @@ public class RootsController : MonoBehaviour
     }
     private void Update()
     {
+        if (movesLeft <= 0) 
+        {
+            return;
+        }
+
         //Get the movement vector based on input.
         Vector3 movement = Vector3.zero;
         float angle = 0;
@@ -72,33 +81,48 @@ public class RootsController : MonoBehaviour
             switch (t)
             {
                 case MapManager.TileType.Dirt:
-                    //Spawning new root.
-                    GameObject prefab = null;
-                    switch (lastDirection)
-                    {
-                        case Direction.Down:
-                            prefab = dd;
-                            break;
-                        case Direction.Up:
-                            prefab = uu;
-                            break;
-                        case Direction.Right:
-                            prefab = rr;
-                            break;
-                        case Direction.Left:
-                            prefab = ll;
-                            break;
-                    }
-                    GameObject o = Instantiate(prefab);
-                    o.transform.position = root.position;
-                    map.RegisterDynamicObject(o, MapManager.TileType.Root);
-
-                    root.position = newPosition;
-                    rootRenderer.sprite = GetSprite(direction);
+                    ApplyMove(newPosition);
+                    break;
+                case MapManager.TileType.Water:
+                    ApplyMove(newPosition);
+                    map.LoadNextLevel();
                     break;
             }
-
-            lastDirection = direction;
         }
+    }
+
+    private void ApplyMove(Vector3 newPosition) 
+    {
+        //Spawning new root.
+        GameObject prefab = null;
+        switch (lastDirection)
+        {
+            case Direction.Down:
+                prefab = dd;
+                break;
+            case Direction.Up:
+                prefab = uu;
+                break;
+            case Direction.Right:
+                prefab = rr;
+                break;
+            case Direction.Left:
+                prefab = ll;
+                break;
+        }
+        GameObject o = Instantiate(prefab);
+        o.transform.position = root.position;
+        map.RegisterDynamicObject(o, MapManager.TileType.Root);
+
+        root.position = newPosition;
+        rootRenderer.sprite = GetSprite(direction);
+        UpdateMovesLeft(movesLeft - 1);
+
+        lastDirection = direction;
+    }
+    private void UpdateMovesLeft(int remainingMoves) 
+    {
+        movesLeft = remainingMoves;
+        movesLeftText.text = "Moves Left: " + remainingMoves;
     }
 }

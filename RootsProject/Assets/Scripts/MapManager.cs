@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
@@ -12,11 +13,14 @@ public class MapManager : MonoBehaviour
     public Sprite dirt;
     public Sprite largeRock;
     public Sprite smallRock;
+    public Sprite water;
+    public int nextLevel = -1;
 
     private Dictionary<Vector3Int, DynamicObject> dynamicObjectsMap;
 
     private void Start()
     {
+        if (nextLevel == -1) print("WARNING: there is no next level index assigned");
         dynamicObjectsMap = new Dictionary<Vector3Int, DynamicObject>();
     }
 
@@ -24,7 +28,7 @@ public class MapManager : MonoBehaviour
         dynamicObjectsMap.Add(grid.WorldToCell(go.transform.position), new DynamicObject(go,t));
     }
 
-    public enum TileType { Dirt, LargeRock, SmallRock, Root, Unknown };
+    public enum TileType { Dirt, LargeRock, SmallRock, Root, Water, Unknown };
     public TileType GetTileType(Vector3 pos)
     {
         Vector3Int intPos = tiles.WorldToCell(pos);
@@ -42,9 +46,17 @@ public class MapManager : MonoBehaviour
         if (t.sprite == smallRock) {
             return TileType.SmallRock;
         }
+        if (t.sprite == water) {
+            return TileType.Water;
+        }
 
         print(" the tile type is unknown!!!");
         return TileType.Unknown;
+    }
+
+    public void LoadNextLevel() 
+    {
+        SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
     }
 
     public class DynamicObject
