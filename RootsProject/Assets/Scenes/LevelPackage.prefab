@@ -183,7 +183,9 @@ MonoBehaviour:
   largeRock: {fileID: -1834201734, guid: d5af94a909be1b440893476561957a1e, type: 3}
   smallRock: {fileID: -200175161, guid: d5af94a909be1b440893476561957a1e, type: 3}
   water: {fileID: -451484724, guid: d5af94a909be1b440893476561957a1e, type: 3}
-  nextLevel: -1
+  phosphorus: {fileID: -1995053741, guid: d5af94a909be1b440893476561957a1e, type: 3}
+  potassium: {fileID: 21300000, guid: c6066902301fc9e4e9822729bf1c8e29, type: 3}
+  nextLevel: 1
 --- !u!1 &2449337662021836457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,6 +5974,7 @@ MonoBehaviour:
   dd: {fileID: 4224579175266615074, guid: a25d9efe8ff33cc4da38930cd024b7b5, type: 3}
   movesLeftText: {fileID: 2599692577028911412}
   movesLeft: 25
+  canBreakSmallRocks: 0
 --- !u!1 &3851785270662787876
 GameObject:
   m_ObjectHideFlags: 0

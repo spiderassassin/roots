@@ -14,6 +14,7 @@ public class RootsController : MonoBehaviour
     public GameObject rr, ll, uu, dd;
     public TextMeshProUGUI movesLeftText;
     public int movesLeft = 10;
+    public bool canBreakSmallRocks = false;
 
     public enum Direction { Up = 0,Right = -90,Left = 90,Down = 180};
 
@@ -90,6 +91,15 @@ public class RootsController : MonoBehaviour
                     case MapManager.TileType.Potassium:
                         ApplyMove(r, newPosition, direction);
                         SpawnNewRoot(direction+90);
+                        break;
+                    case MapManager.TileType.Phosphorus:
+                        ApplyMove(r, newPosition, direction);
+                        canBreakSmallRocks = true;
+                        break;
+                    case MapManager.TileType.SmallRock:
+                        if (canBreakSmallRocks){
+                            ApplyMove(r, newPosition, direction);
+                        }
                         break;
                 }
             }
