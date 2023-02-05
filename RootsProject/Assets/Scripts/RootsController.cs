@@ -11,7 +11,7 @@ public class RootsController : MonoBehaviour
     public SpriteRenderer rootRenderer;
     public Transform root;
     public Sprite r, l, u, d;
-    public GameObject rr, ll, uu, dd;
+    public GameObject rr, ll, uu, dd, ru, rd, lu, ld;
     public TextMeshProUGUI movesLeftText;
     public int movesLeft = 10;
     public bool canBreakSmallRocks = false;
@@ -127,16 +127,59 @@ public class RootsController : MonoBehaviour
         switch (r.lastDirection)
         {
             case Direction.Down:
-                prefab = dd;
+                switch(r.direction){
+                    case Direction.Right:
+                        prefab = lu;
+                        break;
+                    case Direction.Left:
+                        prefab = ru;
+                        break;
+                    default:
+                        prefab = dd;
+                        break;
+                }
                 break;
+
             case Direction.Up:
-                prefab = uu;
+                switch(r.direction){
+                    case Direction.Right:
+                        prefab = ld;
+                        break;
+                    case Direction.Left:
+                        prefab = rd;
+                        break;
+                    default:
+                        prefab = uu;
+                        break;
+                }
                 break;
+
             case Direction.Right:
-                prefab = rr;
+                switch(r.direction){
+                    case Direction.Down:
+                        prefab = rd;
+                        break;
+                    case Direction.Up:
+                        prefab = ru;
+                        break;
+                    default:
+                        prefab = rr;
+                        break;
+                }
                 break;
+
             case Direction.Left:
-                prefab = ll;
+                switch(r.direction){
+                    case Direction.Down:
+                        prefab = ld;
+                        break;
+                    case Direction.Up:
+                        prefab = lu;
+                        break;
+                    default:
+                        prefab = ll;
+                        break;
+                }
                 break;
         }
         GameObject o = Instantiate(prefab);
