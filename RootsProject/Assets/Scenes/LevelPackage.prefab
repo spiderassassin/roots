@@ -5980,6 +5980,8 @@ MonoBehaviour:
   movesLeftText: {fileID: 2599692577028911412}
   movesLeft: 25
   canBreakSmallRocks: 0
+  rock_break: {fileID: 0}
+  root_grow: {fileID: 0}
 --- !u!1 &3851785270662787876
 GameObject:
   m_ObjectHideFlags: 0
