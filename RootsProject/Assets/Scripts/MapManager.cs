@@ -34,6 +34,7 @@ public class MapManager : MonoBehaviour
     public enum TileType { Dirt, LargeRock, SmallRock, Root, Water, Potassium, Phosphorus, Nitrogen, Unknown };
     public TileType GetTileType(Vector3 pos)
     {
+        pos.z = 0;
         Vector3Int intPos = tiles.WorldToCell(pos);
         if (dynamicObjectsMap.ContainsKey(intPos)) {
             return dynamicObjectsMap[intPos].type;

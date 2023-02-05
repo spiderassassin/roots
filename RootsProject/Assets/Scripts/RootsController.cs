@@ -112,6 +112,21 @@ public class RootsController : MonoBehaviour
             }
         }
     }
+    public bool IsBlocked(Vector3 pos)
+    {
+        MapManager.TileType r = map.GetTileType(pos + Vector3.right);
+        MapManager.TileType l = map.GetTileType(pos + -Vector3.right);
+        MapManager.TileType u = map.GetTileType(pos + Vector3.up);
+        MapManager.TileType d = map.GetTileType(pos + -Vector3.up);
+
+        return TileBlockedCheck(r) && TileBlockedCheck(l) && TileBlockedCheck(u) && TileBlockedCheck(d);
+    }
+    private bool TileBlockedCheck(MapManager.TileType r) {
+        
+        return r == MapManager.TileType.Root
+                || r == MapManager.TileType.LargeRock
+                || (!canBreakSmallRocks && r == MapManager.TileType.SmallRock);
+    }
 
     private void SpawnNewRoot(Direction direction) 
     {
@@ -196,7 +211,7 @@ public class RootsController : MonoBehaviour
         r.lastDirection = r.direction;
 
         // If there are no moves left we currently just restart the level.
-        if (movesLeft <= 0)
+        if (movesLeft <= 0 || IsBlocked(root.position))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
         }
