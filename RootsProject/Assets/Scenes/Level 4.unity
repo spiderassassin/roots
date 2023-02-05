@@ -429,15 +429,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2449337660844105952, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: orthographic size
-      value: 2.423753
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2449337660844105959, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.89
+      value: -6
       objectReference: {fileID: 0}
     - target: {fileID: 2449337660844105959, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.03
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 2449337661651183199, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: nitrogen
