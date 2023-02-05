@@ -89,8 +89,8 @@ public class RootsController : MonoBehaviour
                         map.LoadNextLevel();
                         break;
                     case MapManager.TileType.Potassium:
-                        ApplyMove(r, newPosition, direction);
-                        SpawnNewRoot(direction+90);
+                        //ApplyMove(r, newPosition, direction);
+                        //SpawnNewRoot(direction+90);
                         break;
                     case MapManager.TileType.Phosphorus:
                         ApplyMove(r, newPosition, direction);

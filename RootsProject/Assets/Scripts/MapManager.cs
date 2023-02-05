@@ -17,13 +17,13 @@ public class MapManager : MonoBehaviour
     public Sprite phosphorus;
     public Sprite potassium;
     public Sprite nitrogen;
-    public int nextLevel = -1;
+    public string nextLevel = "-1";
 
     private Dictionary<Vector3Int, DynamicObject> dynamicObjectsMap;
 
     private void Start()
     {
-        if (nextLevel == -1) print("WARNING: there is no next level index assigned");
+        if (nextLevel == "-1") print("WARNING: there is no next level index assigned");
         dynamicObjectsMap = new Dictionary<Vector3Int, DynamicObject>();
     }
 

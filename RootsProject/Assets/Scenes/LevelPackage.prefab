@@ -183,9 +183,10 @@ MonoBehaviour:
   largeRock: {fileID: -1834201734, guid: d5af94a909be1b440893476561957a1e, type: 3}
   smallRock: {fileID: -200175161, guid: d5af94a909be1b440893476561957a1e, type: 3}
   water: {fileID: -451484724, guid: d5af94a909be1b440893476561957a1e, type: 3}
-  phosphorus: {fileID: -1995053741, guid: d5af94a909be1b440893476561957a1e, type: 3}
-  potassium: {fileID: 21300000, guid: c6066902301fc9e4e9822729bf1c8e29, type: 3}
-  nextLevel: 1
+  phosphorus: {fileID: -2115473238, guid: d5af94a909be1b440893476561957a1e, type: 3}
+  potassium: {fileID: -440292501, guid: d5af94a909be1b440893476561957a1e, type: 3}
+  nitrogen: {fileID: -1995053741, guid: d5af94a909be1b440893476561957a1e, type: 3}
+  nextLevel: n/a
 --- !u!1 &2449337662021836457
 GameObject:
   m_ObjectHideFlags: 0
@@ -5972,6 +5973,10 @@ MonoBehaviour:
   ll: {fileID: 5139343527993451273, guid: 86642a1c2200d1e488bccff06dee78dd, type: 3}
   uu: {fileID: 4224579175266615074, guid: a25d9efe8ff33cc4da38930cd024b7b5, type: 3}
   dd: {fileID: 4224579175266615074, guid: a25d9efe8ff33cc4da38930cd024b7b5, type: 3}
+  ru: {fileID: 4224579175266615074, guid: 64f8690ae1b615442bb8960a34697d59, type: 3}
+  rd: {fileID: 4224579175266615074, guid: 0e88b07ad85916a4c92ada5a9236f904, type: 3}
+  lu: {fileID: 4224579175266615074, guid: f5e68fac0ce719148bfb6048afe46640, type: 3}
+  ld: {fileID: 4224579175266615074, guid: a119c1083e4c1d04fbbfbb2cd5d6850c, type: 3}
   movesLeftText: {fileID: 2599692577028911412}
   movesLeft: 25
   canBreakSmallRocks: 0

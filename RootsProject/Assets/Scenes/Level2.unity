@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2449337661651183199, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: nextLevel
-      value: 0
+      value: Scene
       objectReference: {fileID: 0}
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileAssetArray.Array.size
@@ -153,7 +153,7 @@ PrefabInstance:
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileAssetArray.Array.data[3].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 5f5de7eaa0117404cb23939b2511b15d, type: 2}
+      objectReference: {fileID: 11400000, guid: bb4a3ec552da1054bb4370035b3097be, type: 2}
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileAssetArray.Array.data[4].m_Data
       value: 
@@ -161,7 +161,7 @@ PrefabInstance:
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[3].m_Data
       value: 
-      objectReference: {fileID: -1995053741, guid: d5af94a909be1b440893476561957a1e, type: 3}
+      objectReference: {fileID: -2115473238, guid: d5af94a909be1b440893476561957a1e, type: 3}
     - target: {fileID: 2449337662021836462, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[4].m_Data
       value: 
