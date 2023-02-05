@@ -266,6 +266,22 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[393].second.m_TileSpriteIndex
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2449337662487288746, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: ld
+      value: 
+      objectReference: {fileID: 4224579175266615074, guid: a119c1083e4c1d04fbbfbb2cd5d6850c, type: 3}
+    - target: {fileID: 2449337662487288746, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: lu
+      value: 
+      objectReference: {fileID: 4224579175266615074, guid: f5e68fac0ce719148bfb6048afe46640, type: 3}
+    - target: {fileID: 2449337662487288746, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: rd
+      value: 
+      objectReference: {fileID: 4224579175266615074, guid: 0e88b07ad85916a4c92ada5a9236f904, type: 3}
+    - target: {fileID: 2449337662487288746, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
+      propertyPath: ru
+      value: 
+      objectReference: {fileID: 4224579175266615074, guid: 64f8690ae1b615442bb8960a34697d59, type: 3}
     - target: {fileID: 8041289613665194648, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_RootOrder
       value: 0
