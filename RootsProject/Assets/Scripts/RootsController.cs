@@ -101,6 +101,10 @@ public class RootsController : MonoBehaviour
                             ApplyMove(r, newPosition, direction);
                         }
                         break;
+                    case MapManager.TileType.Nitrogen:
+                        movesLeft += 3;
+                        ApplyMove(r,newPosition,direction);
+                        break;
                 }
             }
         }

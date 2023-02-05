@@ -16,6 +16,7 @@ public class MapManager : MonoBehaviour
     public Sprite water;
     public Sprite phosphorus;
     public Sprite potassium;
+    public Sprite nitrogen;
     public int nextLevel = -1;
 
     private Dictionary<Vector3Int, DynamicObject> dynamicObjectsMap;
@@ -30,7 +31,7 @@ public class MapManager : MonoBehaviour
         dynamicObjectsMap.Add(grid.WorldToCell(go.transform.position), new DynamicObject(go,t));
     }
 
-    public enum TileType { Dirt, LargeRock, SmallRock, Root, Water, Potassium, Phosphorus, Unknown };
+    public enum TileType { Dirt, LargeRock, SmallRock, Root, Water, Potassium, Phosphorus, Nitrogen, Unknown };
     public TileType GetTileType(Vector3 pos)
     {
         Vector3Int intPos = tiles.WorldToCell(pos);
@@ -57,6 +58,9 @@ public class MapManager : MonoBehaviour
         }
         if (t.sprite == phosphorus) {
             return TileType.Phosphorus;
+        }
+        if (t.sprite == nitrogen) {
+            return TileType.Nitrogen;
         }
 
         print(" the tile type is unknown!!!");
