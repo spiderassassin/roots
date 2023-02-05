@@ -5970,6 +5970,8 @@ MonoBehaviour:
   ll: {fileID: 5139343527993451273, guid: 86642a1c2200d1e488bccff06dee78dd, type: 3}
   uu: {fileID: 4224579175266615074, guid: a25d9efe8ff33cc4da38930cd024b7b5, type: 3}
   dd: {fileID: 4224579175266615074, guid: a25d9efe8ff33cc4da38930cd024b7b5, type: 3}
+  movesLeftText: {fileID: 2599692577028911412}
+  movesLeft: 25
 --- !u!1 &3851785270662787876
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,11 +6106,11 @@ RectTransform:
   m_Father: {fileID: 366104621995640892}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1.5}
 --- !u!222 &4710710731746093008
 CanvasRenderer:
   m_ObjectHideFlags: 0

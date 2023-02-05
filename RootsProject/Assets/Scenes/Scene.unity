@@ -123,17 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!114 &720354122 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2599692577028911412, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-  m_PrefabInstance: {fileID: 2449337660967243155}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2449337660967243155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -141,38 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_Pivot.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2211527243253203174, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2371643965448790693, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_Name
       value: LevelPackage
@@ -181,10 +138,6 @@ PrefabInstance:
       propertyPath: nextLevel
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2449337662487288746, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
-      propertyPath: movesLeftText
-      value: 
-      objectReference: {fileID: 720354122}
     - target: {fileID: 8041289613665194648, guid: e9a74fe6ef47b4f48bac0e34bbb50ca1, type: 3}
       propertyPath: m_RootOrder
       value: 0

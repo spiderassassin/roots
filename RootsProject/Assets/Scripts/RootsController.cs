@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class RootsController : MonoBehaviour
 {
@@ -39,11 +40,6 @@ public class RootsController : MonoBehaviour
     }
     private void Update()
     {
-        if (movesLeft <= 0) 
-        {
-            return;
-        }
-
         //Get the movement vector based on input.
         Vector3 movement = Vector3.zero;
         float angle = 0;
@@ -119,6 +115,12 @@ public class RootsController : MonoBehaviour
         UpdateMovesLeft(movesLeft - 1);
 
         lastDirection = direction;
+
+        // If there are no moves left we currently just restart the level.
+        if (movesLeft <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
+        }
     }
     private void UpdateMovesLeft(int remainingMoves) 
     {
