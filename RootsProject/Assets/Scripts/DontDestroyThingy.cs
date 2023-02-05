@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class DontDestroyThingy : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static DontDestroyThingy t;
     void Start()
     {
+        if(t)
+        {
+            Destroy(gameObject);
+            return;
+        }
         DontDestroyOnLoad(gameObject);
+        t = this;
     }
 
     // Update is called once per frame
