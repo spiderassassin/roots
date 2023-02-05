@@ -17,6 +17,8 @@ public class RootsController : MonoBehaviour
     public bool canBreakSmallRocks = false;
     public AudioSource rock_break;
     public AudioSource root_grow;
+    public AudioSource item_pick;
+
     public enum Direction { Up = 0,Right = -90,Left = 90,Down = 180};
 
     private Root primaryRoot;
@@ -96,6 +98,8 @@ public class RootsController : MonoBehaviour
                         break;
                     case MapManager.TileType.Phosphorus:
                         ApplyMove(r, newPosition, direction);
+                        item_pick.Play();
+                        ////////////////////////////////////////////
                         canBreakSmallRocks = true;
                         break;
                     case MapManager.TileType.SmallRock:
