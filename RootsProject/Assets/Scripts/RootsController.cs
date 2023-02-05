@@ -46,10 +46,10 @@ public class RootsController : MonoBehaviour
     {      
         //Get the movement vector based on input.
         Vector3 movement = Vector3.zero;
-        Direction direction = Direction.Down;
 
         foreach (Root r in roots)
         {
+            Direction direction = r.direction;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 movement = (Vector3.up);
@@ -106,6 +106,8 @@ public class RootsController : MonoBehaviour
     }
     private void ApplyMove(Root r, Vector3 newPosition, Direction direction) 
     {
+        r.direction = direction;
+
         //Spawning new root.
         GameObject prefab = null;
         switch (r.lastDirection)
