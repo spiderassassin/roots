@@ -16,7 +16,7 @@ public class DontDestroyThingy : MonoBehaviour
         t = this;
     }
 
-    // Update is called once per frame
+    // Update is ca11lled once per frame
     void Update()
     {
         
